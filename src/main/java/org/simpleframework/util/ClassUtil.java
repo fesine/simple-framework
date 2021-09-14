@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.lang.reflect.Constructor;
 import java.net.URL;
 import java.util.HashSet;
 import java.util.Set;
@@ -100,6 +101,24 @@ public class ClassUtil {
     }
 
     /**
+     * 实例化class
+     * @param clazz Class
+     * @param <T> class的类型
+     * @param accessible 是否支持创建私有class对象的实例
+     * @return 类的实例化
+     */
+    public static <T> T newInstance(Class<?> clazz, boolean accessible){
+        try {
+            Constructor constructor = clazz.getDeclaredConstructor();
+            constructor.setAccessible(accessible);
+            return (T)constructor.newInstance();
+        } catch (Exception e) {
+            log.error("newInstance error",e);
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
      * 获取class对象
      * @param className class全名=package+类名
      * @return
@@ -112,6 +131,7 @@ public class ClassUtil {
             throw new RuntimeException(e);
         }
     }
+
 
     /**
      * 获取classLoader

@@ -7,6 +7,7 @@ import com.fesine.entity.dto.Result;
 import com.fesine.service.combine.HeadLineShopCategoryCombineService;
 import com.fesine.service.solo.HeadLineService;
 import com.fesine.service.solo.ShopCategoryService;
+import org.simpleframework.core.annotation.Service;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ import java.util.List;
  * @author: fesine
  * @updateTime:2021/9/12
  */
+@Service
 public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCategoryCombineService {
 
     private HeadLineService headLineService;

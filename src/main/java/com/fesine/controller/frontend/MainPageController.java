@@ -1,8 +1,9 @@
-package com.fesine.controller;
+package com.fesine.controller.frontend;
 
 import com.fesine.entity.dto.MainPageInfoDTO;
 import com.fesine.entity.dto.Result;
 import com.fesine.service.combine.HeadLineShopCategoryCombineService;
+import org.simpleframework.core.annotation.Controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author: fesine
  * @updateTime:2021/9/12
  */
+@Controller
 public class MainPageController {
 
     private HeadLineShopCategoryCombineService headLineShopCategoryCombineService;

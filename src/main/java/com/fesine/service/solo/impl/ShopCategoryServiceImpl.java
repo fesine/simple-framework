@@ -3,6 +3,7 @@ package com.fesine.service.solo.impl;
 import com.fesine.entity.bo.ShopCategory;
 import com.fesine.entity.dto.Result;
 import com.fesine.service.solo.ShopCategoryService;
+import org.simpleframework.core.annotation.Service;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ import java.util.List;
  * @author: fesine
  * @updateTime:2021/9/11
  */
+@Service
 public class ShopCategoryServiceImpl implements ShopCategoryService {
     @Override
     public Result<Boolean> addShopCategory(ShopCategory shopCategory) {

@@ -3,6 +3,7 @@ package com.fesine.controller.superadmin;
 import com.fesine.entity.bo.HeadLine;
 import com.fesine.entity.dto.Result;
 import com.fesine.service.solo.HeadLineService;
+import org.simpleframework.core.annotation.Controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,6 +17,7 @@ import java.util.List;
  * @author: fesine
  * @updateTime:2021/9/12
  */
+@Controller
 public class HeadLineOperationController {
 
     private HeadLineService headLineService;

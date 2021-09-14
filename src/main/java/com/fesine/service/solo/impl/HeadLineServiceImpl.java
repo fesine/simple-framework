@@ -3,6 +3,7 @@ package com.fesine.service.solo.impl;
 import com.fesine.entity.bo.HeadLine;
 import com.fesine.entity.dto.Result;
 import com.fesine.service.solo.HeadLineService;
+import org.simpleframework.core.annotation.Service;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ import java.util.List;
  * @author: fesine
  * @updateTime:2021/9/11
  */
+@Service
 public class HeadLineServiceImpl implements HeadLineService {
     @Override
     public Result<Boolean> addHeadLine(HeadLine headLine) {
