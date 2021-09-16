@@ -21,7 +21,7 @@ import java.util.List;
  * @updateTime:2021/9/12
  */
 @Service
-public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCategoryCombineService {
+public class HeadLineShopCategoryCombineServiceImpl2 implements HeadLineShopCategoryCombineService {
 
     @Autowired
     private HeadLineService headLineService;
@@ -29,7 +29,7 @@ public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCateg
     @Autowired
     private ShopCategoryService shopCategoryService;
 
-    public HeadLineShopCategoryCombineServiceImpl() {
+    public HeadLineShopCategoryCombineServiceImpl2() {
     }
 
     @Override
